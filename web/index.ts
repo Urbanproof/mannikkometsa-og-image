@@ -74,6 +74,18 @@ const TextInput = ({ value, oninput }: TextInputProps) => {
     );
 }
 
+const TextAreaInput = ({ value, oninput }: TextInputProps) => {
+    return H(
+        'textarea',
+        {
+            value,
+            rows: 12,
+            className: 'input-outer-wrapper',
+            oninput: (e: any) => oninput(e.target.value)
+        }
+    );
+}
+
 interface ButtonProps {
     label: string;
     onclick: () => void;
@@ -189,9 +201,12 @@ const App = (_: any, state: AppState, setState: SetState) => {
     };
     const {
         fileType = 'png',
-        fontSize = '100px',
+        fontSize = '50px',
         md = true,
-        text = '**Hello** World',
+        text =
+`## **Männikkometsä**
+#### Opiskelija­henkinen vaikuttava toimisto
+Autamme julkisorganisaatioita, korkeakouluja ja järjestöjä konseptointi- ja kehitystyössä sekä viestinnässä ja markkinoinnissa.`,
         images = [imageOptions[0].value],
         widths=[],
         heights=[],
@@ -247,7 +262,7 @@ const App = (_: any, state: AppState, setState: SetState) => {
                 }),
                 H(Field, {
                     label: 'Text Input',
-                    input: H(TextInput, {
+                    input: H(TextAreaInput, {
                         value: text,
                         oninput: (val: string) => {
                             console.log('oninput ' + val);

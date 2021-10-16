@@ -120,6 +120,10 @@ button:hover {
     width: 100%;
 }
 
+textarea.input-outer-wrapper {
+    height: auto;
+}
+
 .input-outer-wrapper:hover {
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     border-color: #ddd;

@@ -65,8 +65,12 @@ function getCss(fontSize: string) {
         vertical-align: -0.1em;
     }
 
-    .heading {
+    h1, h2, h3, h4, h5, h6 {
         font-family: 'Playfair Display',sans-serif;
+    }
+
+    .text {
+        font-family: 'Lato',sans-serif;
         font-size: ${sanitizeHtml(fontSize)};
         font-style: normal;
         color: white;
@@ -97,7 +101,7 @@ export function getHtml(parsedReq: ParsedRequest) {
                 ).join('')}
             </div>
             <div class="spacer">
-            <div class="heading">${emojify(
+            <div class="text">${emojify(
                 md ? marked(text) : sanitizeHtml(text)
             )}
             </div>
