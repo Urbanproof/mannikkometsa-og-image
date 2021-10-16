@@ -1,27 +1,44 @@
 body {
-  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-    "Arial", sans-serif;
-  margin: 20px;
-  overflow-x: hidden;
-  padding: 0;
-  box-sizing: border-box;
+    font-family: Lato, sans-serif;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main {
+    margin: 20px;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #012724;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display',sans-serif;
+}
+
+p {
+    font-family: Lato, sans-serif;
 }
 
 a {
     cursor: pointer;
-    color: #0076FF;
+    color: inherit;
     text-decoration: none;
     transition: all 0.2s ease;
     border-bottom: 1px solid white;
 }
 
 a:hover {
-    border-bottom: 1px solid #0076FF;
-}
-
-footer {
-    opacity: 0.5;
-    font-size: 0.8em;
+    color: #ffaf87;
+    border-bottom: 1px solid #ffaf87;
 }
 
 .center, h1 {
@@ -258,7 +275,7 @@ label {
     height: 60px;
     align-items: center;
     justify-content: space-between;
-    
+
     box-shadow: 0 4px 9px rgba(0,0,0,0.12);
     font-size: 14px;
     display: flex;
@@ -307,7 +324,7 @@ img {
 
 @media (max-width: 900px) {
     .split {
-        flex-wrap: wrap; 
+        flex-wrap: wrap;
     }
 
     .field-label {
